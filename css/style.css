@@ -140,7 +140,7 @@ h1 {
 
 .start-button {
   display: block;
-  width: 110px;
+  width: 140px;
   margin: auto;
   margin-top: 20px;
 }
@@ -155,4 +155,9 @@ h1 {
 .player-name {
   margin: 0;
   color: black;
+}
+
+.computer-button {
+  margin: 15px 0px;
+  width: 140px;
 }
