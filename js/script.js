@@ -88,7 +88,7 @@
         winScreen.className = 'screen screen-win screen-win-tie';
         winScreen.querySelector('p').innerHTML = 'You tied!';
       }
-      if ($boardScreen[0].className === 'board computer-active' && !isFull(board) && !checkForWin()) {
+      if (turn === 2 && $boardScreen[0].className === 'board computer-active' && !isFull(board) && !checkForWin()) {
         clickEnabled = false; // need to disable clicking while the computer does its turn
         computerTurn();
         setTimeout( () => {
