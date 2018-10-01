@@ -40,7 +40,7 @@
   document.querySelector('.screen-start header').appendChild(computerButton);
 
 // If a person clicks start game ---
-  $startButton.on('click', (e) => {
+  $startButton.on('click', () => {
     player1Name = $player1Name.val();
     player2Name = $player2Name.val();
 
@@ -126,6 +126,8 @@
     $(`#player${turn}`)[0].className = 'players active';
     return turn;
   }
+
+  // this function is for minimax algorithm which has not been implemented yet
 
   function pseudoTurn (turn, boxSelected, board) {
     board[boxSelected.id] = turn;
@@ -223,6 +225,8 @@
     }, 1000);
 
   }
+
+// The following programming is for future implementation of Minimax algorithm
   function score(turn, board) {
     if (winHorizontally(2, board) || winVertically(2, board) || winDiagonally(2, board)) {
       return 10;
